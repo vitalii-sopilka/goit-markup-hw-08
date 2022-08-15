@@ -1,0 +1,42 @@
+.portfolio {
+  padding: 94px 0;
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  &__button {
+    font-family: Inherit;
+    font-weight: 500;
+    font-size: 16px;  
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: var(--color-header);
+    background-color: var(--color-team);
+    cursor: pointer;
+    text-align: center;
+    border: 0;
+    border-radius: 4px;
+    padding: 6px 22px;
+    transition: color var(--transition-time) var(--cubic-function),
+      box-shadow var(--transition-time) var(--cubic-function),
+      background-color var(--transition-time) var(--cubic-function);
+    &:hover,
+    &:focus {
+      box-shadow: var(--shadows);
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+  }
+}
+
+.portfolio__nav-item + .portfolio__nav-item {
+  margin-left: 10px;
+}
+
+/* Подсветка первой кнопки */
+.first {
+  box-shadow: var(--shadows);
+  color: var(--color-white);
+  background-color: var(--color-accent);
+}

@@ -1,0 +1,38 @@
+.clients {
+  padding: 94px 0;
+  &__title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--color-header);
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+  }
+  &__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    outline: transparent;
+    border: 1px solid var(--color-icon) ;
+    border-radius: 4px;
+    color: var(--color-icon);
+    transition: color var(--transition-time) var(--cubic-function),
+      border-color var(--transition-time) var(--cubic-function);
+    &:hover,
+    &:focus {
+      color: var(--color-accent);
+      border-color: var(--color-accent);
+    }
+  }
+  &__icon {
+    display: flex;
+    fill: currentColor;
+  }
+}
