@@ -40,3 +40,17 @@
   color: var(--color-white);
   background-color: var(--color-accent);
 }
+
+@media screen and (min-width: $tablet-width) {
+  .portfolio__nav {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: $desktop-width) {
+  .portfolio {
+    padding: 94px 0;
+  }
+  .portfolio__nav {
+    margin-bottom: 50px;
+  }
+}

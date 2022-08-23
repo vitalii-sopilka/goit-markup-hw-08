@@ -67,3 +67,26 @@
     color: var(--color-gray);
   }
 }
+
+@media screen and (min-width: $mobile-width) {
+  .projects__description-wrapper {
+    align-items: center;
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: $tablet-width) {
+  .projects__item {
+    width: calc((100% - 30px) / 2);
+  }
+  .projects__description-wrapper {
+    overflow-y: hidden;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .projects__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
