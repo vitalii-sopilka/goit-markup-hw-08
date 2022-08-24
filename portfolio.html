@@ -52,16 +52,16 @@
         <div class="header-bottom-wrapper">
           <ul class="header-contacts list">
             <li class="header-contacts__item">
-              <a href="mailto:info@devstudio.com" class="header-contacts__link link">
-                <svg width="16" height="12" class="header-contacts__icon">
+              <a href="mailto:info@devstudio.com" class="header-contacts__link email link">
+                <svg width="16" height="12" class="email__icon email__icon--desktop">
                   <use href="./images/icons.svg#icon-mail"></use>
                 </svg>
                 info@devstudio.com
               </a>
             </li>
             <li class="header-contacts__item">
-              <a href="tel:+380961111111" class="header-contacts__link link">
-                <svg width="10" height="16" class="header-contacts__icon">
+              <a href="tel:+380961111111" class="header-contacts__link phone link">
+                <svg width="10" height="16" class="phone__icon phone__icon--desktop">
                   <use href="./images/icons.svg#icon-phone"></use>
                 </svg>
                 +38 096 111 11 11
@@ -81,10 +81,11 @@
             <li class="header-socials__item">
               <a href="#" class="header-socials__link">LinkedIn</a>
             </li>
+          </ul>
         </div>
       </div>
     </div>
-  </header> 
+  </header>
   <main>
     <!-- Кнопки -->
     <section class="portfolio">
@@ -487,23 +488,26 @@
     <div class="container">
       <div class="address-join-wrapper">
         <div class="address-wrapper" id="contacts-id">
-          <a href="index.html" class="logo footer__logo link"><span lang="en" class="footer__logo--span">Web</span>Studio</a>
-          <address class="footer-adress">
-            <p class="footer-adress__post">г. Киев, пр-т Леси Украинки, 26</p>
+          <a href="index.html" class="logo footer__logo link"><span lang="en"
+            class="footer__logo--span"
+            >Web</span>Studio</a
+          >
+          <address class="address">
+            <p class="address__location">г. Киев, пр-т Леси Украинки, 26</p>
             <ul class="footer-contacts list">
-              <li class="footer-adress__item">
+              <li class="footer-contacts__item">
                 <a href="mailto:info@example.com" class="footer-contacts__link link">info@example.com</a>
               </li>
-              <li class="footer-adress__item">
+              <li class="footer-contacts__item">
                 <a href="tel:+380991111111" class="footer-contacts__link link">+38 099 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
         <!-- Присоединяйтесь -->
-        <div class="socials">
-          <p class="socials__text">Присоединяйтесь</p>
-          <ul class="socials__list list">
+        <div class="join">
+          <p class="join__title">Присоединяйтесь</p>
+          <ul class="socials list">
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <svg width="20" height="20" class="socials__icon">
@@ -542,7 +546,7 @@
           <label class="subscribe__label">
             <input type="email" name="email" placeholder="E-mail" class="subscribe__input" />
           </label>
-          <button class="subscribe__button" type="submit">
+          <button class="subscribe__button button" type="submit">
             Подписаться
             <svg class="subscribe__icon" width="24" height="24">
               <use href="./images/icons.svg#icon-modal-send"></use>

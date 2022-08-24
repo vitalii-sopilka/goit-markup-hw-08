@@ -1,9 +1,10 @@
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
   &__nav {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 15px 8px;
   }
   &__button {
     font-family: Inherit;
@@ -11,7 +12,6 @@
     font-size: 16px;  
     line-height: 1.6;
     letter-spacing: 0.03em;
-    color: var(--color-header);
     background-color: var(--color-team);
     cursor: pointer;
     text-align: center;
@@ -46,6 +46,7 @@
     justify-content: center;
   }
 }
+
 @media screen and (min-width: $desktop-width) {
   .portfolio {
     padding: 94px 0;

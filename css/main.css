@@ -1053,9 +1053,8 @@ img {
   }
 }
 .team {
+  padding: 94px 0;
   background-color: var(--color-team);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .team__title {
   margin-bottom: 50px;
@@ -1063,13 +1062,14 @@ img {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--color-header);
 }
 .team__list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .team__item {
-  min-width: 270px;
+  flex-basis: 100%;
   box-shadow: var(--shadows);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--color-white);
@@ -1085,7 +1085,6 @@ img {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--color-header);
 }
 .team__position {
   font-size: 16px;
@@ -1099,10 +1098,10 @@ img {
   display: flex;
   justify-content: center;
 }
-.team__soc-item {
+.team__soc-item:not(:last-child) {
   width: 44px;
   height: 44px;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 .team__soc-link {
   display: flex;
@@ -1118,19 +1117,28 @@ img {
   color: var(--color-white);
   background-color: var(--color-accent);
 }
-
-.team__item + .team__item {
-  margin-left: 30px;
-}
-
-.team__soc-item:first-child {
-  margin-left: 0;
-}
-
-.team__soc-icon {
+.team_soc-icon {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding: 94px 0;
+  }
+  .team__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+  .team__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.67;
+  }
+}
 .clients {
   padding: 94px 0;
 }
@@ -1454,12 +1462,13 @@ img {
 }
 
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 .portfolio__nav {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 15px 8px;
 }
 .portfolio__button {
   font-family: Inherit;
@@ -1467,7 +1476,6 @@ img {
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
-  color: var(--color-header);
   background-color: var(--color-team);
   cursor: pointer;
   text-align: center;
