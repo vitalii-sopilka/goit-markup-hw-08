@@ -1,15 +1,16 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  gap: 30px;
   &__item {
-    flex-basis: calc(100% / 3 - 30px);
-    margin-top: 30px;
-    margin-left: 30px;
+    width: 100%;
+    outline: 1px solid #eeeeee;
   }
   &__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
     transition: box-shadow var(--transition-time) var(--cubic-function);
     &:hover,
     &:focus {
@@ -17,7 +18,7 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
     }
     &:hover .projects__description-wrapper,
-    &:focus .projects__description-wrapper, {
+    &:focus .projects__description-wrapper {
       transform: translateY(0);
     }
   }
@@ -33,23 +34,25 @@
   &__description-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
+    padding: 15px;
+    overflow-y: scroll;
     transform: translateY(101%);
     transition: transform var(--transition-time) var(--cubic-function);
     background-color: rgba(33, 150, 243, 0.9);
   }
   &__description {
-    width: 322px;
+    width: calc(100% - 48px);
     font-size: 18px;
     line-height: 1.56;
     color: var(--color-white);
   }
   &__content {
     padding: 20px 24px;
+    flex-grow: 1;
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
@@ -61,6 +64,7 @@
     letter-spacing: 0.06em;
   }
   &__item-description {
+    margin-top: 4px;
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;

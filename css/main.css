@@ -357,14 +357,13 @@ img {
 }
 
 .header-mini {
-  display: flex;
+  display: inline-block;
   justify-content: space-between;
   align-items: center;
 }
 
 .header__logo {
   display: inline-block;
-  color: var(--color-black);
   padding: 16px 0;
 }
 .header__logo--span {
@@ -417,7 +416,7 @@ img {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: var(--background-color);
+  background-color: var(--color-white);
   padding: 48px 25px;
   overflow-y: scroll;
   visibility: visible;
@@ -462,7 +461,7 @@ img {
 .header-contacts__link {
   display: flex;
   align-items: center;
-  color: #757575;
+  color: var(--color-gray);
   transition: color var(--transition-time) var(--cubic-function);
 }
 .header-contacts__link:hover, .header-contacts__link:focus {
@@ -499,9 +498,9 @@ img {
 
 .header-socials__item:not(:last-child):after {
   content: "";
-  border-left: 1px solid #757575;
+  border-left: 1px solid var(--color-gray);
   margin-left: 10px;
-  color: #757575;
+  color: var(--color-gray);
 }
 
 @media screen and (min-width: 480px) {
@@ -529,7 +528,7 @@ img {
     max-width: 100%;
     overflow-y: hidden;
     height: 100%;
-    background-color: #ffffff;
+    background-color: var(--color-white);
     padding: 0;
   }
   .header-menu.is-hidden {
@@ -593,7 +592,7 @@ img {
   }
   .header-contacts__link.phone {
     padding-bottom: 20px;
-    color: #757575;
+    color: var(--color-gray);
     font-size: inherit;
     line-height: inherit;
   }
@@ -619,14 +618,14 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .mini-header {
+  .header-mini {
     margin-right: 93px;
   }
   .min-menu-open-btn {
     display: none;
   }
   .header nav {
-    margin-left: 0;
+    margin-left: 88px;
   }
   .header-contacts {
     flex-direction: row;
@@ -922,51 +921,7 @@ img {
 }
 .about {
   background-color: var(--color-white);
-  padding: 94 0;
-}
-.about__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.about__item {
-  flex-basis: calc((100% - 90px) / 4);
-}
-.about__item:not(:last-child) {
-  margin-right: 30px;
-}
-.about__content {
-  display: flex;
-  width: 270px;
-  height: 120px;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-team);
-  border-radius: 4px;
-  margin-bottom: 30px;
-}
-.about__title {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--color-header);
-}
-.about__text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--color-gray);
-}
-.about__icon {
-  border-radius: 4px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.about {
-  background-color: var(--color-white);
-  padding: 94 0;
+  padding: 60px 0;
 }
 .about__list {
   display: flex;
@@ -1048,7 +1003,7 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .gallery {
+  .doing {
     display: flex;
   }
 }
@@ -1517,16 +1472,17 @@ img {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  gap: 30px;
 }
 .projects__item {
-  flex-basis: calc(33.3333333333% - 30px);
-  margin-top: 30px;
-  margin-left: 30px;
+  width: 100%;
+  outline: 1px solid #eeeeee;
 }
 .projects__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
   transition: box-shadow var(--transition-time) var(--cubic-function);
 }
 .projects__link:hover, .projects__link:focus {
@@ -1547,23 +1503,25 @@ img {
 .projects__description-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
+  padding: 15px;
+  overflow-y: scroll;
   transform: translateY(101%);
   transition: transform var(--transition-time) var(--cubic-function);
   background-color: rgba(33, 150, 243, 0.9);
 }
 .projects__description {
-  width: 322px;
+  width: calc(100% - 48px);
   font-size: 18px;
   line-height: 1.56;
   color: var(--color-white);
 }
 .projects__content {
   padding: 20px 24px;
+  flex-grow: 1;
   border-bottom: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
   border-right: 1px solid #EEEEEE;
@@ -1575,6 +1533,7 @@ img {
   letter-spacing: 0.06em;
 }
 .projects__item-description {
+  margin-top: 4px;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
