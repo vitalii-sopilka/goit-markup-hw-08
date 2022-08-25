@@ -1,12 +1,11 @@
 .team {
-  padding: 94px 0;
+  padding: 60px 0;
   background-color: var(--color-team);
   &__title {
-    margin-bottom: 50px;
-    font-size: 36px;
+    margin-bottom: 30px;
+    font-size: 28px;
     line-height: 1.17;
     text-align: center;
-    letter-spacing: 0.03em;
   }
   &__list {
     display: flex;
@@ -15,13 +14,13 @@
   }
   &__item {
     flex-basis: 100%;
-    box-shadow: var(--shadows);
+    padding-bottom: 30px;
     border-radius: 0px 0px 4px 4px;
     background-color: var(--color-white);
+    box-shadow: var(--shadows);
   }
-  &__content {
-    padding-bottom: 30px;
-    padding-top: 30px;
+  &__photo {
+    margin-bottom: 30px;
   }
   &__teammate {
     margin-bottom: 10px;
@@ -29,35 +28,32 @@
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    letter-spacing: 0.03em;
   }
   &__position {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    letter-spacing: 0.03em;
     margin-bottom: 16px;
-    color: var(--color-gray);   
+    color: var(--color-gray);
   }
   &__soc-list {
     display: flex;
     justify-content: center;
   }
   &__soc-item:not(:last-child) {
-    width: 44px;
-    height: 44px;
     margin-right: 10px;
   }
   &__soc-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    color: #afb1b8;
+    color: var(--color-icon);
     transition: color var(--transition-time) var(--cubic-function),
-    background-color var(--transition-time) var(--cubic-function);
+      background-color var(--transition-time) var(--cubic-function);
+    outline: transparent;
     &:hover,
     &:focus {
       color: var(--color-white);
@@ -68,14 +64,6 @@
     fill: currentColor
   }
 }
-
-// .team__item + .team__item {
-//   margin-left: 30px;
-// }
-
-// .team__soc-item:first-child {
-//   margin-left: 0;
-// }
 
 @media screen and (min-width: $tablet-width) {
   .team__item {
