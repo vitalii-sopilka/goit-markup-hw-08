@@ -1,12 +1,4 @@
 @charset "UTF-8";
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-/*
-Document
-========
-*/
-/**
-Use a better box model (opinionated).
-*/
 *,
 ::before,
 ::after {
@@ -264,8 +256,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--color-header);
-  background-color: var(--color-white);
   letter-spacing: 0.03em;
 }
 
@@ -357,7 +347,7 @@ img {
 }
 
 .header-mini {
-  display: inline-block;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -625,7 +615,7 @@ img {
     display: none;
   }
   .header nav {
-    margin-left: 88px;
+    margin-left: 0;
   }
   .header-contacts {
     flex-direction: row;
@@ -1060,7 +1050,7 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  color: var(--color-icon);
+  color: #afb1b8;
   transition: color var(--transition-time) var(--cubic-function), background-color var(--transition-time) var(--cubic-function);
   outline: transparent;
 }
@@ -1068,7 +1058,7 @@ img {
   color: var(--color-white);
   background-color: var(--color-accent);
 }
-.team_soc-icon {
+.team__soc-icon {
   fill: currentColor;
 }
 

@@ -8,7 +8,7 @@
 }
 
 .header-mini {
-  display: inline-block;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -282,7 +282,7 @@
     display: none;
   }
   .header nav {
-    margin-left: 88px;
+    margin-left: 0;
   }
   .header-contacts {
     flex-direction: row;

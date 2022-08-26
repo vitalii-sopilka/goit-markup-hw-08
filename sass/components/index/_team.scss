@@ -37,8 +37,8 @@
     color: var(--color-gray);
   }
   &__soc-list {
-    display: flex;
-    justify-content: center;
+      display: flex;
+      justify-content: center;
   }
   &__soc-item:not(:last-child) {
     margin-right: 10px;
@@ -50,7 +50,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    color: var(--color-icon);
+    color: #afb1b8;
     transition: color var(--transition-time) var(--cubic-function),
       background-color var(--transition-time) var(--cubic-function);
     outline: transparent;
@@ -60,8 +60,8 @@
       background-color: var(--color-accent);
     }
   }
-  &_soc-icon {
-    fill: currentColor
+  &__soc-icon {
+    fill: currentColor;
   }
 }
 
