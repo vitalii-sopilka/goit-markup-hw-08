@@ -6,7 +6,8 @@
   margin-left: auto;
   margin-right: auto;
   &__title {
-    font-size: 18px;
+    width: 360px;
+    font-size: 26px;
     line-height: 1.62;
     margin: 0 auto 30px auto;
     font-weight: 900;
@@ -59,8 +60,10 @@
   url(../images/hero-bg-mobile-2x.jpg);
   }
 }
+
 @media screen and (min-width: $mobile-width) {
   .hero__title {
+    width: 360px;
     font-size: 26px;
   }
 }
@@ -97,6 +100,7 @@
     height: 600px;
   }
   .hero__title {
+    width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
