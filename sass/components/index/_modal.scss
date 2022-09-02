@@ -227,7 +227,7 @@
 
 @media screen and (min-width: $mobile-width) {
   .modal {
-    width: 450px;
+    max-width: 528px;
   }
   .modal__title {
     font-size: 20px;
