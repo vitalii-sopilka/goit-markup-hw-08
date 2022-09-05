@@ -1197,8 +1197,9 @@ img {
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 528px;
-  height: 581px;
+  width: calc(100% - 30px);
+  max-width: 450px;
+  height: 609px;
   opacity: 1;
   visibility: visible;
   padding: 40px;
@@ -1392,7 +1393,8 @@ img {
 
 @media screen and (min-width: 480px) {
   .modal {
-    width: 450px;
+    width: calc(100% - 30px);
+    max-width: 528px;
   }
   .modal__title {
     font-size: 20px;
